@@ -1,0 +1,240 @@
+@font-face {
+    font-family: Samurai;
+    src: url(./fonts/SamuraiBlast.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 200ms;
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    font-family: Samurai;
+    animation: bg 15s ease infinite;
+    background: linear-gradient(139.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
+    background-size: 200% 200%;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(255, 68, 246);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#retry {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-family: Samurai;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    text-shadow: 0px 0px 10px rgb(255, 68, 246);
+    box-shadow: 0px 0px 10px white;
+    color: rgb(255, 68, 246);
+    text-decoration: none;
+}
+
+#retry:hover {
+    cursor: pointer;
+}
+
+#retry:active {
+    transform: scale(0.95);
+}
+
+#range {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+}
+
+#title {
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: guess 2s infinite ease-in-out alternate;
+}
+
+#logo {
+    font-size: 40px;
+}
+
+@keyframes guess {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#userBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateY(-50px);
+}
+
+#userBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#userBtns input {
+    width: 30%;
+    padding: 20px 10px;
+    font-size: 40px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50px;
+    font-family: Samurai;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(255, 68, 246);
+    box-shadow: 0px 0px 10px white;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#userBtns input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgb(255, 68, 246);
+}
+
+#check {
+    padding: 15px 40px;
+    font-size: 20px;
+    font-family: Samurai;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    text-shadow: 0px 0px 10px rgb(255, 68, 246);
+    box-shadow: 0px 0px 10px white;
+    color: rgb(255, 68, 246);
+}
+
+#check:hover {
+    cursor: pointer;
+}
+
+#check:active {
+    transform: scale(0.95);
+}
+
+#userResult {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+#userResult ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+#userResult ul li {
+    display: flex;
+    align-items: center;
+    letter-spacing: 5px;
+}
+
+@media (max-width: 800px) {
+    #logo {
+        font-size: 30px;
+    }
+
+    @keyframes guess {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(1.05);
+        }
+    }
+
+    #userBtns input {
+        font-size: 30px;
+        padding: 20px 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    #title h1 {
+        font-size: 30px;
+    }
+
+    #retry {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    #range {
+        font-size: 18px;
+    }
+
+    #check {
+        font-size: 16px;
+    }
+
+    #userBtns input {
+        font-size: 20px;
+        padding: 15px 0px;
+    }
+}
+
+@media (max-width: 450px) {
+    #title {
+        font-size: 20px;
+    }
+
+    #range {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 350px) {
+    #userResult ul {
+        justify-content: space-between;
+        font-size: 12px;
+    }
+}

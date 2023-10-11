@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./icons/site.webmanifest">
+    <link rel="stylesheet" href="./main.css">
+    <title>Guess the number game</title>
+</head>
+
+<body>
+
+    <div id="game">
+        <a href="./index.html" id="retry">Retry</a>
+        <div id="range">Beetwen <span id="from">1</span> and <span id="to">100</span></div>
+
+        <div id="title">
+            <h1>Guess the number!</h1>
+            <div id="logo">
+                <h1>?</h1>
+            </div>
+        </div>
+
+        <div id="userBar">
+            <div id="userBtns">
+                <input type="number" name="" id="userInput">
+                <button id="check">check!</button>
+            </div>
+        </div>
+
+        <div id="userResult">
+            <ul>
+                <li>
+                    <i class="fa-brands fa-medapps"></i>
+                    <h4>Score: </h4>
+                    <span id="userScore">5</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-medal"></i>
+                    <h4>Highscore: </h4>
+                    <span id="userHighScore">0</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
